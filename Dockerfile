@@ -1,4 +1,4 @@
-FROM php:7-fpm
+FROM php:7.1
 RUN apt-get update && apt-get install -y \
       libfreetype6-dev \
       libjpeg62-turbo-dev \
@@ -36,4 +36,4 @@ RUN apt-get update && apt-get install -y \
       WORKDIR "/var/www"
       RUN usermod -u 1000 www-data
 
-      CMD ["php-fpm"]
+      CMD ["php"]
